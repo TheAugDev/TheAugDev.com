@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethelstan & Co. - Elegant Luxury Sample</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"> <link rel="stylesheet" href="elegant-corporate-samples.css">
+    <style>
+        /* Style overrides or additions specific to this luxury sample */
+        :root { /* Redefine for this page specifically if needed, or use classes */
+            --ec-font-heading: 'Cormorant Garamond', serif;
+            --ec-font-body: 'Poppins', sans-serif;
+            --ec-primary-accent-luxury: #2F2E2E; /* Dark Charcoal for text */
+            --ec-secondary-accent-luxury: #D4AF37; /* Muted Gold */
+            --ec-bg-luxury: #FDFBF5; /* Creamy/Warm White */
+        }
+        body.luxury-theme {
+            background-color: var(--ec-bg-luxury);
+            color: var(--ec-primary-accent-luxury);
+        }
+        .luxury-theme .ec-header { background-color: var(--ec-bg-luxury); box-shadow: none; border-bottom-color: #EAE0D3; }
+        .luxury-theme .ec-logo { color: var(--ec-primary-accent-luxury); }
+        .luxury-theme .ec-nav a { color: #5C544A; }
+        .luxury-theme .ec-nav a:hover, .luxury-theme .ec-nav a.active { color: var(--ec-secondary-accent-luxury); }
+        .luxury-theme .ec-nav a::after { background-color: var(--ec-secondary-accent-luxury); }
+        
+        .luxury-theme .ec-hero h1 { color: var(--ec-primary-accent-luxury); font-weight: 400; font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: 2px;}
+        .luxury-theme .ec-hero .ec-subtitle { color: #746A5E; font-style:normal; font-size: clamp(1rem, 1.8vw, 1.2rem); }
+        .luxury-theme .ec-cta-button {
+            background-color: transparent;
+            color: var(--ec-primary-accent-luxury);
+            border: 1px solid var(--ec-primary-accent-luxury);
+            border-radius: 0; /* Sharp edges for luxury */
+            text-transform: uppercase; letter-spacing: 1.5px;
+            font-weight: 400; padding: 12px 28px;
+        }
+        .luxury-theme .ec-cta-button:hover {
+            background-color: var(--ec-primary-accent-luxury);
+            color: var(--ec-bg-luxury);
+        }
+        .luxury-theme .ec-section-title { color: var(--ec-primary-accent-luxury); }
+        .luxury-theme .ec-section-title::after { background-color: var(--ec-secondary-accent-luxury); height: 2px; }
+        
+        .luxury-theme .ec-grid-item { background-color: var(--ec-bg-white); border-color: #EAE0D3; box-shadow: 0 4px 10px rgba(0,0,0,0.03);}
+        .luxury-theme .ec-grid-item:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-color:var(--ec-secondary-accent-luxury); }
+        .luxury-theme .ec-grid-item h3 { color: var(--ec-primary-accent-luxury); font-weight:600; }
+        .luxury-theme .ec-grid-item p { color: #5C544A; }
+        .luxury-theme .ec-grid-item .ec-link { color: var(--ec-secondary-accent-luxury); font-weight: 500; }
+        .luxury-theme .ec-footer { background-color: #EAE0D3; color: #5C544A; }
+        .luxury-theme .ec-footer a { color: #5C544A; }
+        .luxury-theme .ec-footer a:hover { color: var(--ec-primary-accent-luxury); }
+    </style>
+</head>
+<body class="luxury-theme"> <header class="ec-header">
+        <div class="ec-container">
+            <a href="#" class="ec-logo">Aethelstan & Co.</a>
+            <nav class="ec-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Artisanship</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Boutiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ec-hero light-theme" style="background-image: url('https://via.placeholder.com/1920x1000/FDFBF5/D4AF37?text=Subtle+Background+Texture'); background-size:cover; min-height:80vh;">
+            <div class="ec-container">
+                <div class="ec-hero-content-wrapper">
+                    <h1 style="font-style: italic;">Timeless Craft. Modern Elegance.</h1>
+                    <p class="ec-subtitle">Aethelstan & Co. presents a curated collection of objects d'art, handcrafted for those who appreciate enduring quality and refined aesthetics.</p>
+                    <a href="#" class="ec-cta-button">Discover The New Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ec-section" id="featured-pieces">
+            <div class="ec-container">
+                <div class="section-title">
+                    <h2>Signature Pieces</h2>
+                </div>
+                <div class="ec-grid">
+                    <div class="ec-grid-item">
+                        <img src="https://louisbellucci.com/cdn/shop/files/Untitled_design_-_2024-09-16T172247.830.png?v=1726479568" alt="The Sovereign Timepiece" class="ec-thumbnail" style="aspect-ratio: 4/5;">
+                        <div class="ec-content">
+                            <h3>The Sovereign Timepiece</h3>
+                            <p>An exquisite example of horological artistry, limited edition.</p>
+                            <a href="#" class="ec-link">Explore Details &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="ec-grid-item">
+                        <img src="https://www.missionmercantile.com/cdn/shop/products/Mission-Mercantile-Leather-Goods-Heritage-Leather-Briefcase-MM-HR_BC-HK-00-00-1.jpg?v=1715747122" alt="The Heritage Briefcase" class="ec-thumbnail" style="aspect-ratio: 4/5;">
+                        <div class="ec-content">
+                            <h3>The Heritage Briefcase</h3>
+                            <p>Hand-stitched Italian leather, designed for a lifetime of distinction.</p>
+                            <a href="#" class="ec-link">Explore Details &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="ec-grid-item">
+                        <img src="https://www.sheisbujine.com/cdn/shop/files/LuminamoissanitezirconiaEarrings.png?v=1729345736" alt="The Lumina Earrings" class="ec-thumbnail" style="aspect-ratio: 4/5;">
+                        <div class="ec-content">
+                            <h3>The Lumina Earrings</h3>
+                            <p>Ethically sourced diamonds set in platinum, a testament to pure elegance.</p>
+                            <a href="#" class="ec-link">Explore Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ec-section bg-medium-gray" id="artisanship-teaser">
+            <div class="ec-container" style="display:flex; align-items:center; gap:var(--ec-spacing-xxl); flex-wrap:wrap;">
+                <div style="flex:1; min-width:300px;">
+                    <img src="https://images.stockcake.com/public/4/a/f/4af01c53-0cd0-4870-8cfe-fd0a9837cdb4_large/artisan-leather-crafting-stockcake.jpg" alt="Artisan Craftsmanship" style="border-radius:6px;">
+                </div>
+                <div style="flex:1.2; min-width:300px; text-align:left;">
+                    <h2 class="ec-section-title" style="text-align:left; margin-bottom:var(--ec-spacing-m);">The Art of Creation</h2>
+                    <p style="font-size:1.1rem; color:var(--ec-text-medium);">Each Aethelstan & Co. piece is the culmination of generations of skill, meticulous attention to detail, and an unwavering pursuit of perfection. Discover the story behind our craft.</p>
+                    <a href="#" class="ec-cta-button secondary" style="margin-top:var(--ec-spacing-m); border-color: var(--ec-primary-accent-luxury); color:var(--ec-primary-accent-luxury);">Our Artisanship</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ec-footer">
+        <div class="ec-container">
+            <p>&copy; <span id="currentYearECL"></span> Aethelstan & Co. Purveyors of Fine Goods.</p>
+            <p><a href="#">Client Services</a> | <a href="#">Boutique Locator</a></p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYearECL').textContent = new Date().getFullYear();</script>
+</body>
+</html>

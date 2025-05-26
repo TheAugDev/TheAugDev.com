@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Blog - Sample | The Augmented Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="modern-minimalist-samples.css">
+</head>
+<body>
+    <header class="mm-header">
+        <div class="mm-container">
+            <a href="#" class="mm-logo">The Minimalist <span>Post</span></a>
+            <nav class="mm-nav">
+                <ul>
+                    <li><a href="#" class="active">Articles</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="mm-hero mm-blog-hero">
+            <div class="mm-container">
+                <div class="mm-hero-content-wrapper"> <h1>Thoughts on Clarity & Design.</h1>
+                    <p class="mm-subtitle">Exploring minimalism, productivity, and intentional living through thoughtful articles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mm-section" id="featured-post-section">
+            <div class="mm-container" style="max-width: 800px;">
+                 <h2 class="mm-section-title" style="font-size: 1.8rem; text-align:left; margin-bottom: var(--mm-spacing-unit);">Featured Insight</h2>
+                <div class="mm-featured-post-card">
+                    <img src="https://via.placeholder.com/800x400/E0E0E0/B0B0B0?text=Featured+Blog+Post+Image" alt="Featured Blog Post" class="mm-thumbnail" style="aspect-ratio: 2/1;">
+                    <div class="mm-content">
+                        <p class="mm-blog-meta">Design Philosophy • 5 min read</p>
+                        <h3>The Power of White Space in Digital Design</h3>
+                        <p>Discover how strategic use of negative space can dramatically improve user experience, readability, and aesthetic appeal...</p>
+                        <a href="#" class="mm-link">Read Full Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mm-section bg-light-gray" id="recent-posts">
+            <div class="mm-container">
+                <h2 class="mm-section-title">Recent Articles</h2>
+                <div class="mm-grid">
+                    <div class="mm-grid-item">
+                        <img src="https://via.placeholder.com/600x360/E0E0E0/B0B0B0?text=Blog+Post+1" alt="Minimalist Blog Post 1" class="mm-thumbnail">
+                        <div class="mm-content">
+                            <p class="mm-blog-meta">Productivity • 3 min read</p>
+                            <h3>Declutter Your Digital Life: A Minimalist Approach</h3>
+                            <p>Tips and techniques for organizing your digital tools and files for enhanced focus.</p>
+                            <a href="#" class="mm-link">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="mm-grid-item">
+                        <img src="https://via.placeholder.com/600x360/E0E0E0/B0B0B0?text=Blog+Post+2" alt="Minimalist Blog Post 2" class="mm-thumbnail">
+                        <div class="mm-content">
+                            <p class="mm-blog-meta">Mindset • 4 min read</p>
+                            <h3>Intentionalism: Choosing the Essentials</h3>
+                            <p>How focusing on what truly matters can lead to a more fulfilling life and work.</p>
+                            <a href="#" class="mm-link">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="mm-grid-item">
+                        <img src="https://via.placeholder.com/600x360/E0E0E0/B0B0B0?text=Blog+Post+3" alt="Minimalist Blog Post 3" class="mm-thumbnail">
+                        <div class="mm-content">
+                            <p class="mm-blog-meta">Web Design • 6 min read</p>
+                            <h3>Minimalist Typography: Making Words Count</h3>
+                            <p>Exploring the role of fonts and hierarchy in clean web design.</p>
+                            <a href="#" class="mm-link">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                 <div style="text-align: center; margin-top: calc(var(--mm-spacing-unit) * 2.5);">
+                    <a href="#" class="mm-cta-button secondary">View All Articles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mm-footer">
+        <div class="mm-container">
+            <p>&copy; <span id="currentYearBlog">2025</span> The Minimalist Post. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYearBlog').textContent = new Date().getFullYear();</script>
+</body>
+</html>

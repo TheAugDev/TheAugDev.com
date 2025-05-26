@@ -1,0 +1,166 @@
+/* bv-cyber-glow.css - Cyber Glow iPhone Mockup Styles */
+
+.bv-app-hero-alt {
+    background: linear-gradient(200deg, var(--cg-bg-darkest) 0%, var(--cg-bg-medium) 60%, var(--cg-accent-primary) 150%);
+    min-height:100vh; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+}
+
+.bv-app-hero-layout-v2 {
+    display: flex;
+    align-items: center;
+    gap: var(--bv-spacing-xl);
+    width: 100%;
+}
+
+.bv-app-hero-text-v2 {
+    flex: 1.1; 
+    max-width: 600px; 
+    position:relative; 
+    z-index:2;
+    text-align: left;
+}
+.bv-app-hero-text-v2 h1, .bv-app-hero-text-v2 .bv-subtitle {
+    text-align: left;
+}
+
+.bv-app-hero-visual-v2 {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px;
+}
+
+.iphone-mockup {
+    position: relative;
+    width: clamp(280px, 22vw, 300px);
+    height: calc(clamp(280px, 22vw, 300px) * 2.03);
+    background-color: #080808;
+    border-radius: 45px;
+    box-shadow: 
+        0px 30px 50px -20px rgba(0, 0, 0, 0.6),
+        inset 0 0 15px rgba(0,0,0,0.5),
+        inset 0px 2px 2px 0px rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: iphoneFloat 10s ease-in-out infinite alternate;
+    transform-style: preserve-3d;
+}
+
+.iphone-mockup .phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cg-bg-darkest);
+    border-radius: 33px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.7);
+}
+
+.iphone-mockup .phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.iphone-mockup .phone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 28px;
+    background-color: #000000;
+    border-radius: 0 0 18px 18px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.iphone-mockup .phone-speaker {
+    width: 40px;
+    height: 5px;
+    background-color: #222;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.iphone-mockup .side-button {
+    position: absolute;
+    background-color: #1c1c1e;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(255,255,255,0.05);
+}
+.iphone-mockup .volume-up {
+    width: 4px; height: 30px; left: -6px; top: 100px; border-top-left-radius: 3px; border-bottom-left-radius: 3px;
+}
+.iphone-mockup .volume-down {
+    width: 4px; height: 30px; left: -6px; top: 145px; border-top-left-radius: 3px; border-bottom-left-radius: 3px;
+}
+.iphone-mockup .power-button {
+    width: 4px; height: 50px; right: -6px; top: 120px; border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+}
+
+.float-element {
+    position: absolute;
+    border-radius: 50%;
+    animation: floatParticleAdvanced 12s infinite linear; 
+    pointer-events: none; 
+    z-index: -1;
+}
+.sparkle1 {}
+.sparkle2 {}
+.sparkle3 {}
+
+@keyframes iphoneFloat {
+    0% { transform: translateY(0px) rotateX(5deg) rotateY(-7deg); }
+    50% { transform: translateY(-15px) rotateX(0deg) rotateY(0deg); }
+    100% { transform: translateY(0px) rotateX(5deg) rotateY(7deg); }
+}
+
+@keyframes floatParticleAdvanced {
+    0%   { transform: translateY(0px) translateX(0px) scale(0.8) rotate(0deg); opacity: 0.3; }
+    20%  { transform: translateY(-35px) translateX(25px) scale(1.1) rotate(72deg); opacity: 0.6; }
+    40%  { transform: translateY(5px) translateX(-15px) scale(0.9) rotate(144deg); opacity: 0.2; }
+    60%  { transform: translateY(15px) translateX(10px) scale(1.2) rotate(216deg); opacity: 0.5; }
+    80%  { transform: translateY(-10px) translateX(-5px) scale(0.7) rotate(288deg); opacity: 0.4; }
+    100% { transform: translateY(0px) translateX(0px) scale(0.8) rotate(360deg); opacity: 0.3; }
+}
+
+@media (max-width: 992px) {
+    .iphone-mockup {
+        width: clamp(240px, 20vw, 280px);
+        height: calc(clamp(240px, 20vw, 280px) * 2.03);
+        border-radius: 40px;
+        padding: 10px;
+    }
+    .iphone-mockup .phone-screen { border-radius: 30px; }
+    .iphone-mockup .phone-notch { width: 100px; height: 24px; border-radius: 0 0 15px 15px;}
+    .iphone-mockup .phone-speaker { width: 30px; height: 4px;}
+}
+@media (max-width: 768px) {
+    .bv-app-hero-alt .bv-hero-layout-v2 { text-align: center; }
+    .bv-app-hero-alt .bv-hero-text-appalt { text-align: center; }
+    .bv-app-hero-alt .bv-hero-text-appalt h1, .bv-app-hero-alt .bv-hero-text-appalt .bv-subtitle { text-align: center; }
+    .bv-app-hero-visual-v2 { margin-top: var(--bv-spacing-xl); }
+    .iphone-mockup {
+        width: 220px; 
+        height: calc(220px * 2.03);
+        border-radius: 35px;
+        padding: 8px;
+        animation: none;
+        transform: none !important;
+    }
+    .iphone-mockup .phone-screen { border-radius: 27px; }
+    .iphone-mockup .phone-notch { width: 90px; height: 20px; border-radius: 0 0 12px 12px; top:8px;}
+    .iphone-mockup .phone-speaker { width: 25px; height: 3px;}
+    .float-element { display: none; }
+}

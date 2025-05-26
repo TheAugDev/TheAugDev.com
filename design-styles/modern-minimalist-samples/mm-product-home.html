@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Product - Sample | The Augmented Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="modern-minimalist-samples.css">
+</head>
+<body>
+    <header class="mm-header">
+        <div class="mm-container">
+            <a href="#" class="mm-logo">Essentia<span>Line</span></a> <nav class="mm-nav">
+                <ul>
+                    <li><a href="#" class="active">Product</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#" class="mm-cta-button secondary" style="padding: 8px 15px; margin-left:20px;">Buy Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="mm-hero" style="min-height: auto; padding-bottom: calc(var(--mm-spacing-unit)*2);"> <div class="mm-container mm-product-layout">
+                <div class="mm-product-image-col">
+                    <div class="mm-product-image-placeholder">Product Image Here</div>
+                    </div>
+                <div class="mm-product-details-col">
+                    <h1>The PureForm Desk Organizer</h1>
+                    <p class="mm-product-price">$79.00</p>
+                    <p class="mm-product-description">Experience clarity and focus with the PureForm Desk Organizer. Crafted from sustainable materials with a minimalist aesthetic, it elegantly declutters your workspace, allowing you to focus on what truly matters.</p>
+                    <ul class="mm-product-features-list">
+                        <li>Sustainably sourced bamboo</li>
+                        <li>Modular and adaptable design</li>
+                        <li>Non-slip silicone base</li>
+                        <li>Reduces clutter, enhances focus</li>
+                    </ul>
+                    <a href="#" class="mm-cta-button" style="width:100%; text-align:center;">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mm-section" id="product-benefits">
+            <div class="mm-container">
+                <h2 class="mm-section-title">Designed for Simplicity & Function</h2>
+                <div class="mm-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--mm-spacing-unit);">
+                    <div class="mm-grid-item" style="text-align:center;">
+                        <div class="mm-feature-icon-placeholder" style="margin:0 auto 15px auto; font-size:1.8rem;">🌿</div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Made with natural, renewable bamboo for a sustainable choice.</p>
+                    </div>
+                    <div class="mm-grid-item" style="text-align:center;">
+                        <div class="mm-feature-icon-placeholder" style="margin:0 auto 15px auto; font-size:1.8rem;">⚙️</div>
+                        <h3>Versatile Utility</h3>
+                        <p>Perfectly holds pens, notes, phone, and small essentials.</p>
+                    </div>
+                    <div class="mm-grid-item" style="text-align:center;">
+                        <div class="mm-feature-icon-placeholder" style="margin:0 auto 15px auto; font-size:1.8rem;">✨</div>
+                        <h3>Clean Aesthetic</h3>
+                        <p>Enhances your desk with its elegant, minimalist lines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mm-section bg-light-gray" id="lifestyle-shot">
+            <div class="mm-container" style="text-align:center;">
+                 <img src="https://via.placeholder.com/800x450/E0E0E0/B0B0B0?text=Product+in+Minimalist+Workspace" alt="Product in a minimalist workspace" style="border-radius:6px; margin-bottom:var(--mm-spacing-unit);">
+                <h3>Transform Your Workspace. Transform Your Workflow.</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mm-footer">
+        <div class="mm-container">
+            <p>&copy; <span id="currentYearProd">2025</span> EssentiaLine. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYearProd').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Portfolio - Sample | The Augmented Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="modern-minimalist-samples.css">
+</head>
+<body>
+    <header class="mm-header">
+        <div class="mm-container">
+            <a href="#" class="mm-logo">[Your Brand/Name]</a> <nav class="mm-nav">
+                <ul>
+                    <li><a href="#" class="active">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="mm-hero">
+            <div class="mm-container">
+                <div class="mm-hero-content-wrapper"> <h1>Designing with Purpose & Clarity.</h1>
+                    <p class="mm-subtitle">A multidisciplinary designer focused on creating intuitive and impactful digital experiences through thoughtful minimalism.</p>
+                    <a href="#" class="mm-cta-button">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mm-section" id="featured-work">
+            <div class="mm-container">
+                <h2 class="mm-section-title">Featured Projects</h2>
+                <div class="mm-grid">
+                    <div class="mm-grid-item">
+                        <img src="https://via.placeholder.com/600x400/E0E0E0/B0B0B0?text=Portfolio+Project+Alpha" alt="Minimalist Portfolio Project Alpha" class="mm-thumbnail">
+                        <div class="mm-content">
+                            <h3>Project Alpha</h3>
+                            <p>A clean and intuitive UI/UX design for a leading productivity application, focusing on user flow optimization.</p>
+                            <a href="#" class="mm-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="mm-grid-item">
+                        <img src="https://via.placeholder.com/600x400/DADADA/9A9A9A?text=Portfolio+Project+Beta" alt="Minimalist Portfolio Project Beta" class="mm-thumbnail">
+                        <div class="mm-content">
+                            <h3>Project Beta</h3>
+                            <p>Elegant minimalist branding and a responsive website design for a new sustainable lifestyle brand.</p>
+                            <a href="#" class="mm-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="mm-grid-item">
+                        <img src="https://via.placeholder.com/600x400/D0D0D0/A0A0A0?text=Portfolio+Project+Gamma" alt="Minimalist Portfolio Project Gamma" class="mm-thumbnail">
+                        <div class="mm-content">
+                            <h3>Project Gamma</h3>
+                            <p>A simple yet sophisticated e-commerce experience designed for an artisanal goods collective.</p>
+                            <a href="#" class="mm-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mm-section bg-light-gray" id="about-minimalist">
+            <div class="mm-container" style="text-align: center; max-width: 700px;">
+                <h2 class="mm-section-title">My Design Philosophy</h2>
+                <p>I believe great design is achieved not when there is nothing more to add, but when there is nothing left to take away. My process focuses on understanding core user needs to deliver clear, effective, and aesthetically pleasing solutions.</p>
+                <a href="#" class="mm-cta-button secondary" style="margin-top: var(--mm-spacing-m);">More About My Approach</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mm-footer">
+        <div class="mm-container">
+            <p>&copy; <span id="currentYearPF"></span> [Your Name/Brand]. Minimalist Design Excellence.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYearPF').textContent = new Date().getFullYear();</script>
+</body>
+</html>

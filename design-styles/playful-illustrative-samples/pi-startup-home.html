@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateCo - Playful Startup Sample</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="playful-illustrative-samples.css">
+</head>
+<body>
+    <header class="pi-header">
+        <div class="pi-container">
+            <a href="#" class="pi-logo" style="color:var(--pi-accent2-teal);">Innovate<span>Co</span></a>
+            <nav class="pi-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Use Cases</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#" class="pi-cta-button" style="background-color:var(--pi-accent1-coral); padding:10px 20px; font-size:0.9rem;">Get Started Free</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pi-hero" style="background-color: var(--pi-accent3-yellow);">
+            <div class="pi-container">
+                <div class="illustration-placeholder" style="width: clamp(300px, 60vw, 550px); height: clamp(200px, 35vw, 350px); margin-bottom:var(--pi-spacing-l); background-color:var(--pi-bg-light); border-radius:70% 30% 60% 40% / 40% 60% 30% 70%;">Abstract Illustration: "Idea Cloud" or "Connecting Dots" representing the innovative service</div>
+                <h1 style="color:var(--pi-text-dark);">Finally, <span class="highlight" style="color:var(--pi-accent1-coral);">Complex Problems</span> Made Simple.</h1>
+                <p class="pi-subtitle" style="color:var(--pi-text-medium); max-width:600px;">InnovateCo uses a unique illustrative approach and AI-powered insights to break down your biggest challenges into clear, actionable, and even fun solutions!</p>
+                <a href="#" class="pi-cta-button" style="background-color:var(--pi-text-dark); color:var(--pi-accent3-yellow);">Discover Your Solution</a>
+            </div>
+        </section>
+
+        <section class="pi-section" id="how-it-works-startup">
+            <div class="pi-container">
+                <h2 class="pi-section-title">Our <span class="highlight">Illustrated</span> Path to Clarity</h2>
+                <div class="pi-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="pi-grid-item">
+                        <div class="illustration-placeholder" style="height:150px; background-color:var(--pi-bg-soft-blue); border-color:var(--pi-accent1-coral);">Icon/Illustration: "Confused Character"</div>
+                        <div class="pi-content">
+                            <h3 style="color:var(--pi-accent1-coral);">1. Your Challenge</h3>
+                            <p>Tell us about your complex problem in simple terms. Don't worry, we speak human!</p>
+                        </div>
+                    </div>
+                    <div class="pi-grid-item">
+                        <div class="illustration-placeholder" style="height:150px; background-color:var(--pi-bg-soft-blue); border-color:var(--pi-accent2-teal);">Icon/Illustration: "AI Brain with Lightbulb"</div>
+                        <div class="pi-content">
+                            <h3 style="color:var(--pi-accent2-teal);">2. AI Magic & Human Art</h3>
+                            <p>Our AI analyzes, then our illustrators visualize the core issues and potential pathways.</p>
+                        </div>
+                    </div>
+                    <div class="pi-grid-item">
+                        <div class="illustration-placeholder" style="height:150px; background-color:var(--pi-bg-soft-blue); border-color:var(--pi-accent4-purple);">Icon/Illustration: "Clear Path with Signposts"</div>
+                        <div class="pi-content">
+                            <h3 style="color:var(--pi-accent4-purple);">3. Actionable Blueprint</h3>
+                            <p>You get a clear, illustrated roadmap with actionable steps to your solution. Easy!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pi-section bg-soft-yellow" id="benefits-startup">
+            <div class="pi-container" style="text-align: center;">
+                <h2 class="pi-section-title">Why <span class="highlight" style="color:var(--pi-accent1-coral);">Illustrative</span> Problem-Solving?</h2>
+                 <div class="illustration-placeholder" style="width: clamp(250px, 50vw, 400px); height: clamp(180px, 30vw, 300px); margin: 0 auto var(--pi-spacing-l); background-color:var(--pi-accent4-purple);">Illustration: "Happy character with a solved puzzle"</div>
+                <p style="font-size: 1.15rem; color: var(--pi-text-medium); max-width:700px; margin:0 auto var(--pi-spacing-xl);">Visuals cut through complexity. Our unique illustrated approach, combined with AI, makes understanding and solving tough business problems faster, more engaging, and surprisingly fun. Get unstuck and see your path forward with clarity.</p>
+                <a href="#" class="pi-cta-button secondary" style="background-color:var(--pi-accent1-coral); color:var(--pi-bg-light);">See Use Cases</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pi-footer" style="background-color:var(--pi-accent2-teal);">
+        <div class="pi-container">
+            <p>&copy; <span id="currentYearPIStartup"></span> InnovateCo Solutions. Clearly Creative.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYearPIStartup').textContent = new Date().getFullYear();</script>
+</body>
+</html>

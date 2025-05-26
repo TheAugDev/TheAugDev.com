@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - The Augmented Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-tad.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">The Augmented <span>Developer</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="process.html">Our AI Process</a></li>
+                    <li><a href="catalog.html">Design Catalog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section page-hero">
+            <div class="container">
+                <h1>Let's Connect & Augment Your Ideas</h1>
+                <p class="subtitle">Ready to discuss your project, or have a question? I'm here to help you leverage the power of AI in your web development journey.</p>
+            </div>
+        </section>
+
+        <section class="content-section" id="contact-main">
+            <div class="container">
+                <div class="contact-flex-container">
+                    <div class="contact-form-container">
+                        <h2>Send a Direct Message</h2>
+                        <form id="tadContactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="e.g., Project Inquiry, Question">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="7" required placeholder="Tell me about your project or question..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Send Securely</button>
+                            <!---{/* For status messages, initially hidden */}--->
+                            <div id="contactFormStatus" style="margin-top: 20px; display:none;"></div> 
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <h2>Contact Information</h2>
+                        <p><strong>Email:</strong> <a href="mailto:AugmentedDev@outlook.com">AugmentedDev@outlook.com</a></p>
+                        <p><strong>Location:</strong> USA</p>
+                        
+                        <h3 style="margin-top:30px; margin-bottom:15px;">Prefer a More Detailed Approach?</h3>
+                        <p>For new project inquiries, I highly recommend starting with our intelligent discovery form for the most tailored initial consultation:</p>
+                        <a href="/smart-insight/" class="cta-button-primary" style="display:inline-block; margin-top:10px;">Start with SmartInsight AI</a>
+                        
+                        <h3 style="margin-top:40px;">Connect Online</h3>
+                        <p class="social-links-contact">
+                            <!---/* Replace # with your actual links - consider using SVG icons here eventually */--->
+                            <a href="#" style="margin-right:15px; font-size:1.1em;">LinkedIn</a> | 
+                            <a href="#" style="margin-right:15px; font-size:1.1em;">GitHub</a> | 
+                            <a href="#" style="font-size:1.1em;">X (Twitter)</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> The Augmented Developer. Building the Future, Intelligently. | TheAugDev.com</p>
+             <p><a href="contact.html">Contact Us</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="site-scripts.js"></script>
+</body>
+</html>

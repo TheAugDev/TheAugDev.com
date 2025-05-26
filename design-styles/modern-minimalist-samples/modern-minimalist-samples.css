@@ -1,0 +1,325 @@
+/* modern-minimalist-samples.css - Enhanced Version */
+:root {
+    --mm-bg-color: #ffffff;
+    --mm-text-primary: #181818; /* Darker, crisper black */
+    --mm-text-secondary: #5f5f5f; /* Softer secondary gray */
+    --mm-accent-color: #007AFF;  /* Apple-like blue, very clean */
+    --mm-accent-hover-color: #0056b3;
+    --mm-border-color: #ebebeb; /* Even lighter border */
+    --mm-light-gray-bg: #fcfcfc; /* Very, very light gray */
+    
+    --mm-font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* System UI fonts for clean look */
+    --mm-font-secondary: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* For headings, if specific */
+
+    --mm-spacing-xs: 4px;
+    --mm-spacing-s: 8px;
+    --mm-spacing-m: 16px;
+    --mm-spacing-l: 24px;
+    --mm-spacing-xl: 32px;
+    --mm-spacing-xxl: 48px;
+    --mm-spacing-xxxl: 72px; /* Increased largest spacing */
+
+    --mm-container-width: 1080px; /* Slightly adjusted */
+    --mm-transition-fast: 0.2s ease-out;
+    --mm-transition-medium: 0.3s ease-out;
+}
+
+/* --- Global Minimalist Reset & Base --- */
+body, html {
+    margin: 0; padding: 0; font-family: var(--mm-font-primary);
+    background-color: var(--mm-bg-color); color: var(--mm-text-primary);
+    line-height: 1.7; /* Increased for readability */
+    font-size: 16px; 
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+* { box-sizing: border-box; }
+
+.mm-container {
+    width: 92%; /* More fluid */
+    max-width: var(--mm-container-width);
+    margin: 0 auto;
+    padding: 0 var(--mm-spacing-m); /* Base padding */
+}
+
+/* --- Minimalist Header/Nav --- */
+.mm-header {
+    padding: var(--mm-spacing-l) 0;
+    border-bottom: 1px solid var(--mm-border-color);
+    background-color: rgba(255, 255, 255, 0.97); /* Slightly more opaque */
+    backdrop-filter: blur(10px);
+    position: sticky; top: 0; z-index: 100;
+}
+.mm-header .mm-container { display: flex; justify-content: space-between; align-items: center; }
+.mm-logo {
+    font-family: var(--mm-font-secondary); font-size: 1.6rem; font-weight: 700;
+    text-decoration: none; color: var(--mm-text-primary); letter-spacing: -0.5px;
+}
+.mm-logo span { color: var(--mm-accent-color); }
+.mm-nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.mm-nav li { margin-left: var(--mm-spacing-xl); }
+.mm-nav a {
+    text-decoration: none; color: var(--mm-text-secondary); font-weight: 500;
+    font-size: 1rem; transition: color var(--mm-transition-fast);
+    padding-bottom: var(--mm-spacing-xs); position: relative;
+}
+.mm-nav a::after {
+    content: ''; position: absolute; bottom: -2px;
+    left: 0; width: 0; height: 2px;
+    background-color: var(--mm-accent-color);
+    transition: width var(--mm-transition-medium) ease-in-out;
+}
+.mm-nav a:hover::after, .mm-nav a.active::after { width: 100%; }
+.mm-nav a:hover, .mm-nav a.active { color: var(--mm-text-primary); }
+
+/* --- Enhanced Minimalist Hero Section (General) --- */
+.mm-hero {
+    padding: var(--mm-spacing-xxxl) 0 var(--mm-spacing-xxl) 0;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mm-hero-content-wrapper { /* Wrapper for explicit centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    width: 100%; 
+}
+.mm-hero h1 {
+    font-family: var(--mm-font-secondary);
+    font-size: clamp(2.6rem, 5.5vw, 3.8rem); 
+    font-weight: 700;
+    margin-bottom: var(--mm-spacing-l);
+    line-height: 1.2;
+    max-width: 800px;
+    letter-spacing: -1px;
+}
+.mm-hero .mm-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--mm-text-secondary);
+    margin-bottom: var(--mm-spacing-xl);
+    max-width: 680px;
+    line-height: 1.75;
+}
+.mm-cta-button {
+    display: inline-block; padding: 13px 30px;
+    background-color: var(--mm-accent-color); color: var(--mm-bg-color);
+    text-decoration: none; border-radius: 6px; font-weight: 600;
+    font-size: 1rem;
+    transition: background-color var(--mm-transition-fast), color var(--mm-transition-fast), transform var(--mm-transition-fast), box-shadow var(--mm-transition-medium);
+    border: 2px solid var(--mm-accent-color);
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.1);
+}
+.mm-cta-button:hover {
+    background-color: var(--mm-accent-hover-color);
+    border-color: var(--mm-accent-hover-color);
+    color: var(--mm-bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+.mm-cta-button.secondary {
+    background-color: transparent; color: var(--mm-accent-color); box-shadow: none;
+}
+.mm-cta-button.secondary:hover {
+    background-color: var(--mm-accent-color); color: var(--mm-bg-color);
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* --- General Section Styling --- */
+.mm-section { padding: var(--mm-spacing-xxxl) 0; }
+.mm-section-title {
+    font-family: var(--mm-font-secondary); font-size: clamp(1.9rem, 4vw, 2.6rem);
+    text-align: center; margin-bottom: var(--mm-spacing-xxl);
+    font-weight: 700; letter-spacing: -0.5px;
+}
+.mm-section.bg-light-gray { background-color: var(--mm-light-gray-bg); }
+
+/* --- Enhanced Grid for Portfolio / Blog Posts --- */
+.mm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--mm-spacing-xl);
+}
+.mm-grid-item {
+    background-color: var(--mm-bg-color);
+    border: 1px solid var(--mm-border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform var(--mm-transition-medium), box-shadow var(--mm-transition-medium), border-color var(--mm-transition-medium);
+    display: flex; flex-direction: column;
+}
+.mm-grid-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+    border-color: var(--mm-accent-color);
+}
+.mm-grid-item img.mm-thumbnail {
+    width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+    background-color: #f0f0f0; border-bottom: 1px solid var(--mm-border-color);
+}
+.mm-grid-item .mm-content { padding: var(--mm-spacing-l); flex-grow: 1; display: flex; flex-direction: column; }
+.mm-grid-item h3 {
+    font-family: var(--mm-font-secondary); font-size: 1.45rem; margin-bottom: var(--mm-spacing-s);
+    font-weight: 700; line-height: 1.35;
+}
+.mm-grid-item p {
+    font-size: 0.95rem; color: var(--mm-text-secondary);
+    margin-bottom: var(--mm-spacing-m); flex-grow: 1;
+}
+.mm-grid-item .mm-link {
+    font-weight: 600; color: var(--mm-accent-color); text-decoration: none;
+    font-size: 0.95rem; margin-top: auto; align-self: flex-start;
+}
+.mm-grid-item .mm-link:hover { text-decoration: underline; }
+
+/* --- Product Page Specifics (Enhanced) --- */
+.mm-product-layout { display: flex; flex-wrap: wrap; gap: var(--mm-spacing-xxxl); align-items: flex-start; }
+.mm-product-image-col { flex: 1.2; min-width: 300px; }
+.mm-product-image-placeholder {
+    width: 100%; aspect-ratio: 1 / 1; background-color: var(--mm-light-gray-bg);
+    border-radius: 8px; display:flex; align-items:center; justify-content:center; color: var(--mm-text-secondary);
+    border: 1px solid var(--mm-border-color);
+}
+.mm-product-details-col { flex: 1; min-width: 300px; }
+.mm-product-details-col h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: var(--mm-spacing-m); line-height: 1.25;}
+.mm-product-price {
+    font-size: 1.9rem; color: var(--mm-text-primary); font-weight: 700;
+    margin-bottom: var(--mm-spacing-l); font-family: var(--mm-font-secondary);
+}
+.mm-product-description { font-size: 1.05rem; color: var(--mm-text-secondary); margin-bottom: var(--mm-spacing-xl); }
+.mm-product-features-list { list-style: none; padding: 0; margin-bottom: var(--mm-spacing-xl); }
+.mm-product-features-list li {
+    margin-bottom: var(--mm-spacing-s); padding-left: var(--mm-spacing-l);
+    position: relative; color: var(--mm-text-primary); font-size: 1rem;
+}
+.mm-product-features-list li::before {
+    content: '•'; color: var(--mm-accent-color); position: absolute; left: 0;
+    font-weight: bold; font-size: 1.3em; line-height: 1;
+}
+
+/* --- Blog Homepage Specifics (Enhanced) --- */
+.mm-blog-hero .mm-hero-content-wrapper h1 { /* For blog hero title, specifically if different */
+    font-size: clamp(2.8rem, 6vw, 4rem); letter-spacing: -1.5px;
+}
+.mm-featured-post-card {
+    background-color: var(--mm-bg-color); border-radius: 10px;
+    margin-bottom: var(--mm-spacing-xxxl); padding: 0; 
+    border: 1px solid var(--mm-border-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+    overflow:hidden;
+}
+.mm-featured-post-card img.mm-thumbnail { border-radius: 0; border-bottom: 1px solid var(--mm-border-color); }
+.mm-blog-meta {
+    font-size: 0.8125rem; color: var(--mm-text-secondary);
+    margin-bottom: var(--mm-spacing-s); text-transform: uppercase; letter-spacing: 0.75px; font-weight: 600;
+}
+.mm-grid-item .mm-content .mm-blog-meta { text-transform: uppercase; letter-spacing: 0.75px; font-weight: 600;}
+
+
+/* --- Mobile AI App Landing Page Specifics (Enhanced) --- */
+.mm-app-hero { /* This hero has its own layout defined in HTML via .mm-hero-layout */
+    min-height: 85vh; 
+    padding-top: var(--mm-spacing-xxxl); /* Adjust if header is taller */
+    padding-bottom: var(--mm-spacing-xxl);
+    display: flex; /* Overrides general .mm-hero flex-direction if needed */
+    align-items: center;
+}
+.mm-app-hero .mm-hero-layout { /* The container for text and image columns */
+    display: flex;
+    align-items: center;
+    gap: var(--mm-spacing-xl);
+    width: 100%; /* Ensure it takes full width of .mm-container */
+}
+.mm-app-hero .mm-hero-text-col { /* Text column specific styling */
+    flex: 1.1;
+    max-width: 580px;
+    text-align: left; /* Explicitly left for this layout */
+}
+.mm-app-hero .mm-hero-text-col h1 {
+    font-size: clamp(2.5rem, 5vw, 3.6rem);
+    text-align: left; /* Ensure h1 text is left */
+    margin-left:0; margin-right:0; /* Reset auto margins if general .mm-hero h1 had them */
+}
+.mm-app-hero .mm-hero-text-col .mm-subtitle {
+    text-align: left; /* Ensure subtitle text is left */
+    margin-left:0; margin-right:0; /* Reset auto margins */
+    max-width: 100%; /* Allow it to fill its column */
+}
+.mm-app-hero .mm-hero-image-col { /* Image column specific styling */
+    flex: 0.9;
+    display: flex;
+    justify-content: center; 
+}
+.mm-phone-mockup-placeholder {
+    width: 270px; height: 540px; background-color: #111; 
+    border-radius: 40px; border: 12px solid #000000; 
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25), inset 0 0 15px rgba(255,255,255,0.03);
+    display:flex; align-items:center; justify-content:center; color: var(--mm-text-secondary);
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 15px 15px; 
+    font-size: 0.9rem;
+    position: relative;
+}
+.mm-phone-mockup-placeholder::before { 
+    content: ''; position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 10px; background-color: #000; border-radius: 5px;
+}
+.mm-app-store-buttons { margin-top: var(--mm-spacing-xl); display: flex; gap: var(--mm-spacing-m); justify-content: flex-start; } /* flex-start for left align */
+.mm-app-store-buttons img {
+    height: 48px; width: auto; cursor: pointer;
+    transition: transform var(--mm-transition-fast), opacity var(--mm-transition-fast);
+    border-radius: 8px; 
+}
+.mm-app-store-buttons img:hover { transform: scale(1.04); opacity: 0.9; }
+
+.mm-feature-icon-placeholder { 
+    font-size: 2.5rem; color: var(--mm-accent-color);
+    margin-bottom: var(--mm-spacing-m); line-height: 1;
+}
+
+
+/* --- Minimalist Footer --- */
+.mm-footer {
+    padding: var(--mm-spacing-xl) 0 var(--mm-spacing-l) 0; text-align: center;
+    border-top: 1px solid var(--mm-border-color); font-size: 0.9rem; 
+    color: var(--mm-text-secondary); margin-top: var(--mm-spacing-xxxl);
+}
+.mm-footer p { margin-bottom: var(--mm-spacing-xs); }
+.mm-footer a { color: var(--mm-text-secondary); }
+.mm-footer a:hover { color: var(--mm-accent-color); text-decoration: underline;}
+
+
+/* Responsive for Minimalist Samples */
+@media (max-width: 992px) {
+    .mm-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+    .mm-product-details-col h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+    .mm-app-hero .mm-hero-text-col h1 { font-size: clamp(2rem, 4.5vw, 2.8rem); }
+    .mm-phone-mockup-placeholder { transform: scale(0.9); }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 15px; } 
+    .mm-header .mm-container { flex-direction: column; gap: var(--mm-spacing-s); }
+    .mm-nav ul { justify-content: center; flex-wrap: wrap; }
+    .mm-nav li { margin: var(--mm-spacing-xs) var(--mm-spacing-m); }
+
+    .mm-hero { padding: var(--mm-spacing-xxl) 0; min-height: auto; }
+    .mm-hero h1 { font-size: 1.8rem; }
+    .mm-hero .mm-subtitle { font-size: 0.95rem; }
+    
+    .mm-section { padding: var(--mm-spacing-xl) 0; }
+    .mm-section-title { font-size: 1.6rem; margin-bottom: var(--mm-spacing-xl); }
+    
+    .mm-grid { grid-template-columns: 1fr; gap: var(--mm-spacing-l); }
+    .mm-grid-item h3 { font-size: 1.25rem; }
+    
+    .mm-product-layout { flex-direction: column; gap: var(--mm-spacing-l); }
+    .mm-app-hero .mm-hero-layout { flex-direction: column; text-align: center; gap: var(--mm-spacing-l);}
+    .mm-app-hero .mm-hero-text-col { margin-bottom: 0; text-align: center; } /* Center text on mobile */
+    .mm-app-hero .mm-hero-text-col h1, .mm-app-hero .mm-hero-text-col .mm-subtitle { text-align: center; } /* Center text on mobile */
+    .mm-app-store-buttons { justify-content: center; } /* Center buttons on mobile */
+    .mm-phone-mockup-placeholder { width: 180px; height: 360px; border-width: 6px; margin-top: var(--mm-spacing-l); }
+    .mm-phone-mockup-placeholder::before { width:40px; height:8px; top:15px;}
+}

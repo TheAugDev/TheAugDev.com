@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderPals EduApp - Playful Kids App Sample</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Gaegu:wght@400;700&family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="playful-illustrative-samples.css">
+</head>
+<body>
+    <header class="pi-header">
+        <div class="pi-container">
+            <a href="#" class="pi-logo" style="font-family:'Gaegu', cursive; font-size:2.5rem;">WonderPals<span>Edu</span></a>
+            <nav class="pi-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Our Pals</a></li>
+                    <li><a href="#">Play & Learn</a></li>
+                    <li><a href="#">For Parents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pi-hero" style="background-color: var(--pi-bg-soft-blue);">
+            <div class="pi-container">
+                <div class="illustration-placeholder" style="width: clamp(280px, 60vw, 500px); height: clamp(220px, 45vw, 380px); margin-bottom:var(--pi-spacing-l); background-color: var(--pi-accent3-yellow); border-radius: 20px 60px 30px 70% / 70% 30% 70% 40%;">Group of Friendly Animal Character Illustrations Interacting with App Elements</div>
+                <h1 style="color:var(--pi-accent1-coral);">Learning is an <span class="highlight" style="color:var(--pi-accent2-teal);">Adventure!</span></h1>
+                <p class="pi-subtitle" style="color:var(--pi-text-medium);">The WonderPals EduApp makes mastering ABCs, 123s, and new worlds a joyful journey with interactive games, stories, and lovable animal friends.</p>
+                <a href="#" class="pi-cta-button">Start Exploring!</a>
+            </div>
+        </section>
+
+        <section class="pi-section" id="featured-pals">
+            <div class="pi-container">
+                <h2 class="pi-section-title">Meet Your <span class="highlight">Learning</span> Buddies!</h2>
+                <div class="pi-grid">
+                    <div class="pi-grid-item">
+                        <img src="https://via.placeholder.com/400x300/FF7F50/FFFFFF?text=Leo+the+Lion+(Numbers)" alt="Leo the Lion - Numbers Pal" class="pi-thumbnail">
+                        <div class="pi-content">
+                            <h3>Leo the Lion Counts</h3>
+                            <p>Roar your way through fun number games and counting challenges!</p>
+                            <a href="#" class="pi-link">Play with Leo &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="pi-grid-item">
+                        <img src="https://via.placeholder.com/400x300/48D1CC/FFFFFF?text=Polly+the+Parrot+(Letters)" alt="Polly the Parrot - Letters Pal" class="pi-thumbnail">
+                        <div class="pi-content">
+                            <h3>Polly's Alphabet Party</h3>
+                            <p>Sing, rhyme, and discover letters in a vibrant, interactive world.</p>
+                            <a href="#" class="pi-link">Fly with Polly &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="pi-grid-item">
+                        <img src="https://via.placeholder.com/400x300/FFDA6B/3C2A21?text=Finn+the+Fox+(Shapes)" alt="Finn the Fox - Shapes Pal" class="pi-thumbnail">
+                        <div class="pi-content">
+                            <h3>Finn's Shape Forest</h3>
+                            <p>Explore a magical forest and learn all about shapes and colors.</p>
+                            <a href="#" class="pi-link">Adventure with Finn &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pi-section bg-soft-yellow" id="app-features-pi">
+            <div class="pi-container" style="text-align: center;">
+                <h2 class="pi-section-title">Packed with <span class="highlight" style="color:var(--pi-accent4-purple);">Playful</span> Features!</h2>
+                <div class="illustration-placeholder" style="width: clamp(300px, 70vw, 600px); height: clamp(200px, 40vw, 380px); margin: 0 auto var(--pi-spacing-l); background-color: var(--pi-accent2-teal);">Mockup of Interactive App Screens / Game Elements Illustration</div>
+                <p style="font-size: 1.15rem; color: var(--pi-text-medium); max-width:700px; margin:0 auto var(--pi-spacing-xl);">Animated stories that come alive, creative coloring challenges, sing-along songs, and collectible badges to celebrate every learning milestone. All designed with love by educators and artists!</p>
+                <a href="#" class="pi-cta-button secondary" style="background-color:var(--pi-accent4-purple); color:var(--pi-bg-light);">See App Features</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pi-footer">
+        <div class="pi-container">
+            <p>&copy; <span id="currentYearPIKidsApp"></span> WonderPals EduApp. Making Learning Wonderful!</p>
+        </div>
+    </footer>
+    <script>document.getElementById('currentYearPIKidsApp').textContent = new Date().getFullYear();</script>
+</body>
+</html>

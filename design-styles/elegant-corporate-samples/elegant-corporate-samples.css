@@ -1,0 +1,293 @@
+/* elegant-corporate-samples.css */
+:root {
+    /* -- Elegant Corporate Palette -- */
+    --ec-bg-light: #F8F9FA;         /* Crisp off-white / very light gray */
+    --ec-bg-white: #FFFFFF;
+    --ec-bg-dark-blue: #0A2342;    /* Deep, trustworthy navy blue */
+    --ec-bg-medium-gray: #E9ECEF;  /* For subtle section differentiation */
+
+    --ec-text-dark: #212529;       /* Near black for primary text on light backgrounds */
+    --ec-text-medium: #495057;     /* Softer gray for secondary text */
+    --ec-text-light: #FFFFFF;       /* For text on dark backgrounds */
+    --ec-text-accent: var(--ec-primary-accent);
+
+    --ec-primary-accent: #005A9C;  /* A strong, classic blue */
+    --ec-secondary-accent-gold: #B08D57; /* Muted gold/bronze for highlights */
+    --ec-secondary-accent-silver: #C0C0C0; /* Silver accent */
+    
+    --ec-border-color: #DEE2E6;    /* Light, subtle border */
+    --ec-border-dark: #ADB5BD;
+    
+    --ec-font-heading: 'Playfair Display', serif; /* Elegant Serif for headings */
+    --ec-font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif; /* Clean Sans-Serif for body */
+
+    --ec-spacing-xs: 4px;
+    --ec-spacing-s: 8px;
+    --ec-spacing-m: 16px;
+    --ec-spacing-l: 24px;
+    --ec-spacing-xl: 32px;
+    --ec-spacing-xxl: 48px;
+    --ec-spacing-xxxl: 72px;
+
+    --ec-container-width: 1180px;
+    --ec-transition: 0.3s ease-in-out;
+    --ec-fast-transition: 0.2s ease-out;
+}
+
+/* --- Global Elegant Corporate Reset & Base --- */
+body, html {
+    margin: 0; padding: 0; font-family: var(--ec-font-body);
+    background-color: var(--ec-bg-light); color: var(--ec-text-dark);
+    line-height: 1.7; font-size: 17px; /* Slightly larger base for readability */
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; 
+}
+* { box-sizing: border-box; }
+
+.ec-container {
+    width: 90%; max-width: var(--ec-container-width);
+    margin: 0 auto; padding: 0 var(--ec-spacing-m);
+}
+
+/* --- Header/Nav --- */
+.ec-header {
+    padding: var(--ec-spacing-l) 0;
+    background-color: var(--ec-bg-white); 
+    position: sticky; width: 100%; top: 0; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow */
+    border-bottom: 1px solid var(--ec-border-color);
+}
+.ec-header .ec-container { display: flex; justify-content: space-between; align-items: center; }
+.ec-logo {
+    font-family: var(--ec-font-heading); font-size: 1.9rem; font-weight: 700;
+    text-decoration: none; color: var(--ec-text-dark);
+}
+.ec-logo span { color: var(--ec-primary-accent); font-style: italic; }
+.ec-nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.ec-nav li { margin-left: var(--ec-spacing-xl); }
+.ec-nav a {
+    text-decoration: none; color: var(--ec-text-medium); font-weight: 600; /* Slightly bolder */
+    font-size: 1rem; transition: color var(--ec-transition);
+    padding-bottom: var(--ec-spacing-xs); position: relative;
+    letter-spacing: 0.3px;
+}
+.ec-nav a::after {
+    content: ''; position: absolute; bottom: -1px; /* Align with border */
+    left: 0; width: 0; height: 2px; background-color: var(--ec-primary-accent);
+    transition: width var(--ec-transition);
+}
+.ec-nav a:hover::after, .ec-nav a.active::after { width: 100%; }
+.ec-nav a:hover, .ec-nav a.active { color: var(--ec-primary-accent); }
+
+/* --- Hero Section --- */
+.ec-hero {
+    padding: var(--ec-spacing-xxxl) 0; text-align: center;
+    min-height: 70vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    position: relative; overflow: hidden;
+    background-color: var(--ec-bg-dark-blue); /* Dark blue for a premium feel */
+    color: var(--ec-text-light);
+}
+.ec-hero.light-theme { /* Optional: for luxury brand if a lighter hero is needed */
+    background-color: var(--ec-bg-light);
+    color: var(--ec-text-dark);
+}
+.ec-hero.light-theme h1, .ec-hero.light-theme .ec-subtitle { color: var(--ec-text-dark); }
+.ec-hero.light-theme .ec-cta-button { background-color: var(--ec-primary-accent); color: var(--ec-text-light); border-color: var(--ec-primary-accent);}
+.ec-hero.light-theme .ec-cta-button:hover { background-color: transparent; color: var(--ec-primary-accent); }
+
+
+.ec-hero .ec-container { position: relative; z-index: 1;} 
+.ec-hero-content-wrapper { /* For centered content */
+    display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;
+}
+.ec-hero h1 {
+    font-family: var(--ec-font-heading); font-weight: 700; /* Playfair Display is already quite bold */
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem); 
+    margin-bottom: var(--ec-spacing-l); line-height: 1.25;
+    max-width: 850px;
+}
+.ec-hero .ec-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.35rem); color: inherit; /* Inherits from .ec-hero or .ec-hero.light-theme */
+    opacity: 0.9; margin-bottom: var(--ec-spacing-xl); max-width: 700px;
+    line-height: 1.7;
+}
+.ec-cta-button {
+    display: inline-block; padding: 14px 35px;
+    background-color: var(--ec-secondary-accent-gold); /* Gold accent for CTA */
+    color: var(--ec-bg-white);
+    text-decoration: none; border-radius: 4px; /* Sharper radius */
+    font-weight: 600; font-size: 1.05rem;
+    font-family: var(--ec-font-body); /* Sans-serif for button text */
+    letter-spacing: 0.5px;
+    transition: background-color var(--ec-transition), transform var(--ec-transition);
+    border: 2px solid var(--ec-secondary-accent-gold);
+}
+.ec-cta-button:hover {
+    background-color: transparent;
+    color: var(--ec-secondary-accent-gold);
+    transform: translateY(-2px);
+}
+.ec-cta-button.primary { /* If a primary blue button is needed */
+    background-color: var(--ec-primary-accent);
+    border-color: var(--ec-primary-accent);
+    color: var(--ec-bg-white);
+}
+.ec-cta-button.primary:hover {
+    background-color: transparent;
+    color: var(--ec-primary-accent);
+}
+
+
+/* --- General Section Styling --- */
+.ec-section { padding: var(--ec-spacing-xxxl) 0; }
+.ec-section-title {
+    font-family: var(--ec-font-heading); font-size: clamp(2.2rem, 4vw, 3rem);
+    text-align: center; margin-bottom: var(--ec-spacing-xxl); font-weight: 700;
+}
+.ec-section-title::after { /* Subtle underline for section titles */
+    content: ''; display: block; width: 80px; height: 3px;
+    background-color: var(--ec-primary-accent); margin: var(--ec-spacing-m) auto 0 auto;
+}
+.ec-section.bg-medium-gray { background-color: var(--ec-bg-medium-gray); }
+.ec-section.bg-dark-blue { background-color: var(--ec-bg-dark-blue); color: var(--ec-text-light); }
+.ec-section.bg-dark-blue h2, .ec-section.bg-dark-blue h3, .ec-section.bg-dark-blue p { color: var(--ec-text-light); }
+.ec-section.bg-dark-blue .ec-section-title::after { background-color: var(--ec-secondary-accent-gold); }
+.ec-section.bg-dark-blue .ec-text-medium { color: #adb5bd; } /* Lighter secondary text for dark bg */
+
+
+/* --- Grid & Card Styling --- */
+.ec-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--ec-spacing-xl);
+}
+.ec-grid-item {
+    background-color: var(--ec-bg-white);
+    border: 1px solid var(--ec-border-color);
+    border-radius: 6px; overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform var(--ec-transition), box-shadow var(--ec-transition);
+    display: flex; flex-direction: column;
+}
+.ec-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.ec-grid-item img.ec-thumbnail {
+    width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+    background-color: var(--ec-bg-medium-gray);
+    border-bottom: 1px solid var(--ec-border-color);
+}
+.ec-grid-item .ec-content { padding: var(--ec-spacing-l); flex-grow: 1; display: flex; flex-direction: column; }
+.ec-grid-item h3 { /* For item titles like service or project title */
+    font-family: var(--ec-font-heading); font-size: 1.5rem;
+    margin-bottom: var(--ec-spacing-s); font-weight: 700;
+    color: var(--ec-primary-accent);
+}
+.ec-grid-item p { font-size: 0.95rem; color: var(--ec-text-medium); margin-bottom: var(--ec-spacing-m); flex-grow: 1; }
+.ec-grid-item .ec-link {
+    font-weight: 600; color: var(--ec-primary-accent); text-decoration: none;
+    font-size: 0.95rem; margin-top: auto; align-self: flex-start;
+}
+.ec-grid-item .ec-link:hover { text-decoration: underline; }
+
+/* Specific for B2B Service Item */
+.ec-service-item {
+    text-align: center;
+}
+.ec-service-item .icon-placeholder { /* Placeholder for professional icons */
+    font-size: 3rem; color: var(--ec-primary-accent);
+    margin-bottom: var(--ec-spacing-m); line-height: 1;
+}
+.ec-service-item h4 { /* Service title within card */
+    font-family: var(--ec-font-heading);
+    font-size: 1.3rem;
+    color: var(--ec-text-dark);
+    margin-bottom: var(--ec-spacing-s);
+}
+
+
+/* Luxury Brand Specifics */
+.ec-luxury-hero { /* Class for luxury hero specifically */
+    background-color: #F1F1F1; /* Example: very light, warm gray or textured white */
+    color: #333333; /* Darker text for light background */
+}
+.ec-luxury-hero h1 {
+    font-family: 'Times New Roman', Times, serif; /* Classic serif for luxury */
+    font-weight: normal; /* Often lighter weights for luxury headings */
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    letter-spacing: 1px;
+    color: #222; /* Softer black */
+}
+.ec-luxury-hero .ec-subtitle {
+    font-family: var(--ec-font-body);
+    font-style: italic;
+    color: #555;
+}
+.ec-luxury-hero .ec-cta-button {
+    background-color: var(--ec-text-dark); /* Black button */
+    color: var(--ec-bg-white);
+    border-color: var(--ec-text-dark);
+    border-radius: 2px; /* Sharper edges */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+}
+.ec-luxury-hero .ec-cta-button:hover {
+    background-color: var(--ec-bg-white);
+    color: var(--ec-text-dark);
+}
+.ec-feature-highlight { /* For luxury product features */
+    text-align: center;
+    padding: var(--ec-spacing-l) 0;
+}
+.ec-feature-highlight img.feature-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--ec-spacing-m);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.ec-feature-highlight h4 {
+    font-family: var(--ec-font-heading);
+    font-size: 1.4rem; color: var(--ec-text-dark);
+    margin-bottom: var(--ec-spacing-s);
+}
+
+
+/* --- Footer --- */
+.ec-footer {
+    padding: var(--ec-spacing-xl) 0; text-align: center;
+    background-color: var(--ec-bg-dark-blue);
+    color: var(--ec-text-light);
+    font-size: 0.9rem; opacity:0.8;
+    margin-top: var(--ec-spacing-xxxl);
+}
+.ec-footer p { margin-bottom: var(--ec-spacing-xs); color: inherit; }
+.ec-footer a { color: var(--ec-text-light); }
+.ec-footer a:hover { color: var(--ec-secondary-accent-gold); text-decoration: underline;}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .ec-hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+    .ec-section-title { font-size: clamp(2rem, 3.5vw, 2.6rem); }
+    .ec-grid-item h3 { font-size: 1.35rem; }
+    .ec-luxury-hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
+}
+@media (max-width: 768px) {
+    body { font-size: 16px; }
+    .ec-header .ec-container { flex-direction: column; gap: var(--ec-spacing-s); }
+    .ec-nav ul { justify-content: center; flex-wrap: wrap; }
+    .ec-nav li { margin: var(--ec-spacing-xs) var(--ec-spacing-m); }
+
+    .ec-hero { padding: var(--ec-spacing-xxl) 0; min-height: auto; }
+    .ec-hero h1 { font-size: 2rem; }
+    .ec-hero .ec-subtitle { font-size: 1rem; }
+    
+    .ec-section { padding: var(--ec-spacing-xl) 0; }
+    .ec-section-title { font-size: 1.8rem; margin-bottom: var(--ec-spacing-xl); }
+    
+    .ec-grid { grid-template-columns: 1fr; }
+    .ec-grid-item h3 { font-size: 1.3rem; }
+}
